@@ -1,7 +1,6 @@
 var http = require('http');
 fs = require('fs');
 
-
 http.createServer(function(solicitud,respuesta){
 
     const { url } = solicitud;
@@ -15,17 +14,15 @@ http.createServer(function(solicitud,respuesta){
         template='servicios.html'
       }
     else if(url === '/clientes') {
-        template='nosotros.html'
+        template='clientes.html'
       }
     else if(url === '/contacto') {
-        template='nosotros.html'
+        template='contacto.html'
       }
 
     fs.readFile('templates/'+template,function(error,html) {
     respuesta.write(html);
     respuesta.end();    
     });
-    
-
     }).listen(8081);
 
