@@ -6,6 +6,7 @@ http.createServer(function(solicitud,respuesta){
     const { url } = solicitud;
     if (url === '/') {
         template='index.html'
+        
       }
     else if(url === '/nosotros') {
         template='nosotros.html'
